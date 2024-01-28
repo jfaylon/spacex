@@ -1,0 +1,32 @@
+{
+  "name": "spacex",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Juan Faylon <juan.f@saltmine.com>",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jfaylon/spacex.git"
+  },
+  "scripts": {
+    "start": "node index",
+    "start:dev": "nodemon index",
+    "test": "jest"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "jest": "^29.7.0",
+    "pino": "^8.17.2",
+    "pino-http": "^9.0.0",
+    "pino-pretty": "^10.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
