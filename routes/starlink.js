@@ -12,18 +12,17 @@ module.exports = (app) => {
         return false;
       }
       const launchDateArray = data.spaceTrack.LAUNCH_DATE.split("-");
-      const launchYear = Number.parseInt(launchDateArray[0]);
-      const launchMonth = Number.parseInt(launchDateArray[1]);
-      const launchDate = Number.parseInt(launchDateArray[2]);
+      const launchYear = launchDateArray[0];
+      const launchMonth = launchDateArray[1];
+      const launchDate = launchDateArray[2];
 
       const results = [];
-      
-      results.push(checkDate(Number.parseInt(year), launchYear));
-      results.push(checkDate(Number.parseInt(month), launchMonth));
-      results.push(checkDate(Number.parseInt(date), launchDate));
+
+      results.push(checkDate(year, launchYear));
+      results.push(checkDate(month, launchMonth));
+      results.push(checkDate(date, launchDate));
       return results.every((result) => result === true);
     });
-    console.log(processedStarlinkData);
     return res.status(200).send(processedStarlinkData);
   });
   return router;
